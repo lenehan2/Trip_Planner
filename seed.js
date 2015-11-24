@@ -1,5 +1,5 @@
 // This file should contain all the record creation needed to seed the database with its default values.
-// The data can then be loaded with the node seed.js 
+// The data can then be loaded with the node seed.js
 
 var Promise = require('bluebird');
 var mongoose = require('mongoose');
@@ -8,8 +8,19 @@ var Place = models.Place;
 
 var data = {
   Hotel: [
-    {name: "Andaz Wall Street", place: [new Place({address: "75 Wall St", city: "New York", state: "NY", phone: "123-456-7890", location: [40.705137, -74.007624]})], num_stars: 4, amenities: "Pool, Free Wi-Fi" },
-    {name: "Hotel Mulberry", place: [new Place({address: "52 Mulberry St", city: "New York", state: "NY", phone: "123-456-7890", location: [40.715317, -73.999542]})], num_stars: 4.5, amenities: "Free Wi-Fi" },
+    {
+      name: "Andaz Wall Street", 
+      place: [new Place({address: 
+                        "75 Wall St", 
+                        city: "New York", 
+                        state: "NY", 
+                        phone: "123-456-7890", 
+                        location: [40.705137, -74.007624]
+                       })
+            ],
+     num_stars: 4, amenities: "Pool, Free Wi-Fi" },
+    {name: "Hotel Mulberry", place: [new Place({address: "52 Mulberry St", city: "New York", state: "NY", phone: "123-456-7890", location: [40.715317, -73.999542]})],
+     num_stars: 4.5, amenities: "Free Wi-Fi" },
     {name: "The Ritz-Carlton New York, Battery Park", place: [new Place({address: "Two West Street", city: "New York", state: "NY", phone: "123-456-7890", location: [40.705417, -74.017241]})], num_stars: 4.5, amenities: "24 hour Gym, Paid Wi-Fi" },
     {name: "Wall Street Inn", place: [new Place({address: "9 S William St", city: "New York", state: "NY", phone: "123-456-7890", location: [40.704581, -74.010273]})], num_stars: 4, amenities: "Free Wi-Fi" },
     {name: "Smyth TriBeCa", place: [new Place({address: "85 West Broadway", city: "New York", state: "NY", phone: "123-456-7890", location: [40.715076, -74.009301]})], num_stars: 3.5, amenities: "24 hour Gym" },
@@ -61,6 +72,7 @@ var data = {
 };
 
 mongoose.connection.on('open', function() {
+  console.log("John doesn't think we're making it hereeeeeeeeeee")
   mongoose.connection.db.dropDatabase(function() {
 
     console.log("Dropped old data, now inserting data");

@@ -1,16 +1,18 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+mongoose.connect("mongodb://localhost/tripplanner");
+
 var placeSchema = new Schema({
 	address: String,
 	city: String,
-	state: {type: String, uppercse: true, match: /[A-Z]{2}/},
+	state: String, //{type: String, uppercse: true, match: /[A-Z]{2}/},
 	phone: String,
 	location: [Number]
 });
 
 var hotelSchema = new Schema({
-	name: String,
+	name: {type: String, required: true},
 	place: [placeSchema],
 	num_stars: {type: String, enum: [1,2,3,4,5]},//Meh?
 	amenities: String //Meh? Comma delimited what now?
