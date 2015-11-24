@@ -14,18 +14,22 @@ router.get("/", function(req, res){
 
   Hotel.find().exec().then(function(hotels){
     myObj.hotels = hotels;
+    
   }).then(function(){
     return Restaurant.find(); //exec??
   }).then(function(restaurants){
     myObj.restaurants = restaurants;
+    
   }).then(function(){
     return Activity.find();
   }).then(function(activities){
     myObj.activities = activities;
+    
   }).then(function(){
     return Place.find();
   }).then(function(places){
     myObj.places = places;
+    
   }).then(function(){
     res.render("index", myObj);
   });
