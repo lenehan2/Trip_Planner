@@ -31,6 +31,7 @@ router.get("/", function(req, res){
     myObj.places = places;
     
   }).then(function(){
+    console.log(myObj);
     res.render("index", myObj);
   });
 });

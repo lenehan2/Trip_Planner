@@ -1,3 +1,10 @@
+.carousel-caption > h3 {
+  background-color: cornflowerblue;
+  border-radius: 10px; }
+
+#Itinerary ul {
+  list-style: none; }
+
 div {
   height: 100%; }
 
@@ -20,7 +27,7 @@ div {
   margin: 0px 10px 0px 10px; }
 
 body {
-  background: url("http://smashinghub.com/wp-content/uploads/2012/10/Vector-World-Map-22.jpg"); }
+  background: url("http://www.backgroundlabs.com/wp-content/uploads/2013/05/green-plaid-pattern.png"); }
 
 #container {
   width: 100vw;
