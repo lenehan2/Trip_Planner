@@ -2,7 +2,7 @@ var express = require('express'),
     swig = require('swig'),
     bodyParser = require('body-parser'),
     morgan = require('morgan'),
-    routes = require('./routes');
+    routes = require('./router');
 
 var app = express();
 
@@ -21,14 +21,11 @@ app.set('views', __dirname + '/views');
 app.set('view cache', false);
 
 
-app.get('/',function(req,res,next){
-	res.status(200).render('');
-})
-
 app.get('/error',function(req,res,next){
 	res.status(418).render('error');
 })
 
+app.use('/',routes);
 
 app.use(function(req,res,next){
 	var err = new Error("I'm a little teapot")
