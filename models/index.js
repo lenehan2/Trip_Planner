@@ -14,7 +14,7 @@ var placeSchema = new Schema({
 var hotelSchema = new Schema({
 	name: {type: String, required: true},
 	place: [placeSchema],
-	num_stars: {type: String, enum: [1,2,3,4,5]},//Meh?
+	num_stars: {type: Number, min: 1, max: 5},//Meh?
 	amenities: String //Meh? Comma delimited what now?
 });
 
@@ -28,14 +28,14 @@ var restaurantSchema = new Schema({
 	name: String,
 	place: [placeSchema],
 	cuisine: String, //Meh? Comma delimited what now?
-	price: {type: String, enum: [1,2,3,4,5]} //Meh?
+	price: {type: Number, min: 1, max: 5} //Meh?
 });
 
 
 var Place = mongoose.model('Place', placeSchema);
-var Hotel = mongoose.model('Hotel', placeSchema);
-var Activity = mongoose.model('Activity', placeSchema);
-var Restaurant = mongoose.model('Restaurant', placeSchema);
+var Hotel = mongoose.model('Hotel', hotelSchema);
+var Activity = mongoose.model('Activity', activitySchema);
+var Restaurant = mongoose.model('Restaurant', restaurantSchema);
 
 module.exports = {
 	Place: Place,
