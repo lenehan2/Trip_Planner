@@ -29,14 +29,26 @@ div {
 }
 
 .outer-col-footer{
-	padding: 10px 30px 30px 30px;
+	padding: 10px 0px;
+	margin: 0px 10px 0px 10px;
 }
 
 body {
 	background: url('http://smashinghub.com/wp-content/uploads/2012/10/Vector-World-Map-22.jpg');
 }
 
+#container {
+
+	width: 100vw;
+	height: 100vh;
+
+}
 
 * {
 	box-sizing: border-box;
 }
+
+#map {
+	height: 100%;
+}
+

@@ -8,7 +8,7 @@
     
     
     
-    <title>Bootstrap 101 Template</title>
+    <title>Sweet Map Thing</title>
 
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -34,38 +34,41 @@
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
                 </ol>
 
         <!-- Wrapper for Slides -->
         <div class="carousel-inner">
-            <div class="item active">
+             <div class="item active">
+                <!-- Set the fourth background image using inline CSS below. -->
+                <div id="map"></div>
+                <div class="carousel-caption">
+                    <h2>MAPPPPPP</h2>
+                </div>
+                
+            </div>
+            <div class="item">
                 <!-- Set the first background image using inline CSS below. -->
                 <div class="fill" style="background-color: #e09191;"></div>
                 <div class="carousel-caption">
-                    <h2>Caption 1</h2>
+                    <h2>Hotels</h2>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the second background image using inline CSS below. -->
                 <div class="fill" style="background-color: #50ffa1');"></div>
                 <div class="carousel-caption">
-                    <h2>Caption 2</h2>
+                    <h2>Restaurants</h2>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the second background image using inline CSS below. -->
                 <div class="fill" style="background-color: #50ffa1');"></div>
                 <div class="carousel-caption">
-                    <h2>Caption 2</h2>
+                    <h2>Activities</h2>
                 </div>
             </div>
-            <div class="map">
-                <!-- Set the fourth background image using inline CSS below. -->
-                <div class="fill" style="background-color: #6b5ce0;"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 3</h2>
-                </div>
-            </div>
+           
         </div>
 
         <!-- Controls -->
@@ -87,6 +90,7 @@
     <!--     <footer style="color: white;"><div>this is the footer</div></footer>-->
 
      </div><!--END ROW-->
+      
      <div class="row" id="row-footer">
       <div class="outer-col-footer col-lg-12">
          <div id="progress" class="row2" style="background-color: blue;">
@@ -136,6 +140,8 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="public/js/googleMaps.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdDZqiqhzqyBYXhkkyouTj0ygmz6df8TI&sensor=true"></script>
   </body>
 </html>
