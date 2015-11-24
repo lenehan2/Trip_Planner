@@ -20,6 +20,8 @@ app.set('views', __dirname + '/views');
 // that and use Express's caching instead, if you like:
 app.set('view cache', false);
 
+app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist'));
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'));
 
 app.get('/error',function(req,res,next){
 	res.status(418).render('error');
