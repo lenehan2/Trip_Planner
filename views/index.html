@@ -23,19 +23,76 @@
   </head>
   <body>
    
-   <div class="row">
-     
+   <div id="container">
+     <div class="row" id="row-main">
 
-     <div id="carousel" class="col-lg-8 row1" style="background-color: green;">
-        Here is some text
-     </div>
-     <div id="Itinerary" class="col-lg-4 row1" style="background-color: red;">
-       Here is some more text
-     </div>
-   </div>
-   <div class="row">
-     <div id="progress" class="col-lg-12 row2" style="background-color: blue;">
-       Here is your progress;
+        <div class="outer-col-std col-lg-8">
+         <div id="carousel" class="row1" data-interval="false">
+            <div id="myCarousel" class="carousel slide">
+        <!-- Indicators speciment removed-->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-color: #e09191;"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 1</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-color: #50ffa1');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 2</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-color: #50ffa1');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 2</h2>
+                </div>
+            </div>
+            <div class="map">
+                <!-- Set the fourth background image using inline CSS below. -->
+                <div class="fill" style="background-color: #6b5ce0;"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 3</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </div>
+         </div>
+       </div>
+       <div class="outer-col-std col-lg-4" id="itinerary">
+         <div id="Itinerary" class="row1">
+             <h1>Your itinerary</h1>
+         </div>
+       </div>
+    <!--     <footer style="color: white;"><div>this is the footer</div></footer>-->
+
+     </div><!--END ROW-->
+     <div class="row" id="row-footer">
+      <div class="outer-col-footer col-lg-12">
+         <div id="progress" class="row2" style="background-color: blue;">
+          
+         </div>
+      </div>
      </div>
    </div>
     <!--SWIG STUFF

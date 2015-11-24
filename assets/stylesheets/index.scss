@@ -1,16 +1,42 @@
-* {
-	box-sizing: border-box;
+//@import "clearfix"
+
+
+div {
+	height: 100%;
 }
 
-.row1 {
-	height: 500px;
-	padding: 20px 40px 20px;
+#container {
+	padding: 10px;
 }
-.row2 {
-	height: 20%;
+
+#row-main {
+	height: 80vh;
+//	padding: 20px 40px 20px;
+}
+#row-footer {
+	height: 20vh;
+}
+
+#itinerary{
+	background-color: aqua;
+	border: 3px solid #313131;
+	border-radius: 6px;
+}
+
+.outer-col-std {
+//	padding: 30px 30px 10px 30px;
+	
+}
+
+.outer-col-footer{
+	padding: 10px 30px 30px 30px;
 }
 
 body {
 	background: url('http://smashinghub.com/wp-content/uploads/2012/10/Vector-World-Map-22.jpg');
 }
 
+
+* {
+	box-sizing: border-box;
+}
